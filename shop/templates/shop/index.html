@@ -1,0 +1,17 @@
+{% extends 'shop/base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+    <h1>Сайт Напитков</h1>
+    {% for drink in drinks %}
+        <div class="alert alert-dark mt-2">
+            <h5>Название напитка: {{ drink.title }}</h5>
+            <p>Тип напитка: {{drink.drink_title }}</p>
+            <p>Описание: {{ drink.description }}</p>
+        </div>
+        {%endfor%}
+{% endblock %}
+

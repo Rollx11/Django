@@ -1,3 +1,12 @@
-from django.shortcuts import render
 
-# Create your views here.
+from django.shortcuts import render
+from .models import Drink
+
+
+def index(request):
+    drinks = Drink.objects.all()
+    return render(request, 'shop/index.html', {'title': 'Главная страница сайта', 'drinks': drinks})
+
+
+def about(request):
+    return render(request, 'shop/about.html',)

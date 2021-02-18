@@ -3,5 +3,6 @@ import shop.views as v
 
 urlpatterns = [
     path('', v.index, name="home"),
-    path('about', v.about, name='about')
+    path('about', v.about, name='about'),
+    path('login', v.login, name='login'),
 ]

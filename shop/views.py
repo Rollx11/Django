@@ -10,3 +10,7 @@ def index(request):
 
 def about(request):
     return render(request, 'shop/about.html',)
+
+
+def login(request):
+    return render(request, 'shop/login.html',)

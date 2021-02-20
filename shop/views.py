@@ -1,6 +1,7 @@
-
 from django.shortcuts import render
 from .models import Drink
+from .forms import Loginsform
+
 
 
 def index(request):
@@ -13,4 +14,12 @@ def about(request):
 
 
 def login(request):
-    return render(request, 'shop/login.html',)
+    form = Loginsform()
+
+    if request.method == 'POST':
+        form = Loginsform(request.POST)
+        if form.is_valid():
+            form.save()
+
+    context = { 'form': form }
+    return render(request, 'shop/login.html', context )

@@ -4,16 +4,13 @@
 Регистрация
 {% endblock %}
 {% block content %}
-<h4>Регистрация</h4>
-<form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email адрес</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-    <small id="emailHelp" class="form-text text-muted">Мы никогда никому не передадим вашу электронную почту</small>
-    <label for="exampleInputPassword1">Пароль</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-  {% csrf_token %}
-</form>
+  <h4>Регистрация</h4>
+  <form action="" method="post">
+    {{form}}
+
+    <input type="submit">
+    {% csrf_token %}
+
+  </form>
+
 {% endblock %}
